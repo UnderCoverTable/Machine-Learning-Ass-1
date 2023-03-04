@@ -2,14 +2,15 @@ import os
 import csv
 import random
 
-entries = os.listdir('/home/sameed/Desktop/8th_semester_SP22/CSCS 460 ML/Machine-Learning-Ass-1/Task1/Unknown/')
+path = "C:\\Users\\Sameed\\Desktop\\Machine-Learning-Ass-1\\Task1\\Unknown\\"
+entries = os.listdir(path)
 i = 0
 
 
 files = []
 ages = []
 for entry in entries:
-    files.append(entry)
+    files.append([path.replace("\\",chr(92)) + entry])
     age = ""
     
     for i in range(0,len(entry)):
@@ -22,6 +23,23 @@ for entry in entries:
 
 print(files)
 print(ages)
+
+
+# data to be written row-wise in csv file
+data = files
+
+# opening the csv file in 'w+' mode
+file = open('Train.csv', 'w+', newline ='')
+
+# writing the data into the file
+with file:
+	write = csv.writer(file)
+	write.writerows(data)
+	write.writerows(ages)
+        
+        
+
+
 
 
 # while(len(files) != 50):
