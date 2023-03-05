@@ -2,7 +2,7 @@ import os
 import csv
 import random
 
-path = "C:\\Users\\Sameed\\Desktop\\Machine-Learning-Ass-1\\Task1\\Arham\\Cropped\\"
+path = "C:\\Users\\Sameed\\Desktop\\Machine-Learning-Ass-1\\Task1\\Sameed - Test split\\Cropped\\"
 entries = os.listdir(path)
 i = 0
 
