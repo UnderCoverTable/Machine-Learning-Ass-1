@@ -2,7 +2,7 @@ import os
 import csv
 import random
 
-path = "C:\\Users\\Sameed\\Desktop\\Machine-Learning-Ass-1\\Task1\\Unknown\\"
+path = "C:\\Users\\Sameed\\Desktop\\Machine-Learning-Ass-1\\Task1\\Arham\\Cropped\\"
 entries = os.listdir(path)
 i = 0
 
@@ -35,7 +35,7 @@ file = open('Train.csv', 'w+', newline ='')
 with file:
 	write = csv.writer(file)
 	write.writerows(data)
-	write.writerows(ages)
+	# write.writerows(ages)
         
         
 
