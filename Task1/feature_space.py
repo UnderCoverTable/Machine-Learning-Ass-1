@@ -1,24 +1,59 @@
-import pandas as pd
-from PIL import Image
-import numpy
+# sum = 0
+# i =10
+# while i<1:
+#     sum = sum + i
+#     sum = sum *2
+#     i -=1
+
+# print(sum)
 
 
-trainDF = pd.read_excel('Train.xlsx')
 
-imagePaths = trainDF['Path'].tolist()
+# def rec(string):
+#     if len(string) == 1:
+#         return string
+
+#     first_char = string[0]
+#     last_chars = string[1:len(string)]
+
+#     return rec(last_chars) + first_char
+
+# print(rec("1234"))
+
+x = [1,2,3,4,5,6]
+
+print(x[0:])
 
 
-image = Image.open(imagePaths[0])
+def func(items):
+    i = 0
+    while i <len(items):
+        if(len(items[i]) == 0):
+            del items[i]
 
-np_array_img = numpy.array(image)
-np_array_img = np_array_img.flatten()
-# print(np_array_img)
-# print(len(np_array_img))
+        i += 1
+
+    print(items)
+
+names = ["Rachel", " ", "Medhana","", " ","Tim"]
+
+func(names)
+print(names)
+import math
+print(math.floor(-5.7))
+print(round(-5.))
 
 
-df = pd.DataFrame(np_array_img)
-df = df.transpose()
-# df.to_excel('chechk.xlsx')
+def treee(li):
+    root = {}
+    for sentence in li:
+        base = root
+        for word in sentence.split(" "):
+            if not base.get(word):
+                base[word] = {}
+            base = base[word]
 
+    return root
 
-print(df)
+tree = treee(["Hello World", "Hello there "])
+print(tree)
